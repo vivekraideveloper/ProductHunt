@@ -20,6 +20,9 @@
 		808216812268A64B00017C6C /* CommentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808216802268A64B00017C6C /* CommentsModel.swift */; };
 		808216952269AFE800017C6C /* PostsModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808216942269AFE800017C6C /* PostsModelTest.swift */; };
 		808216972269BDA900017C6C /* PostsVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808216962269BDA900017C6C /* PostsVCTest.swift */; };
+		808216992269FA3900017C6C /* CommentsModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808216982269FA3900017C6C /* CommentsModelTest.swift */; };
+		8082169B226A11D500017C6C /* DownloadClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8082169A226A11D500017C6C /* DownloadClientTest.swift */; };
+		8082169D226A120A00017C6C /* DownloadClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8082169C226A120A00017C6C /* DownloadClient.swift */; };
 		BB5ED860609EC6760CBA7E61 /* Pods_Product_Hunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A972E6382B5657CC7E8F6592 /* Pods_Product_Hunt.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,9 @@
 		8082168E2269AF8000017C6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		808216942269AFE800017C6C /* PostsModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModelTest.swift; sourceTree = "<group>"; };
 		808216962269BDA900017C6C /* PostsVCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVCTest.swift; sourceTree = "<group>"; };
+		808216982269FA3900017C6C /* CommentsModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsModelTest.swift; sourceTree = "<group>"; };
+		8082169A226A11D500017C6C /* DownloadClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadClientTest.swift; sourceTree = "<group>"; };
+		8082169C226A120A00017C6C /* DownloadClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadClient.swift; sourceTree = "<group>"; };
 		90E5A233445C9E5EB2251BCF /* Pods-Product Hunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product Hunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Product Hunt/Pods-Product Hunt.debug.xcconfig"; sourceTree = "<group>"; };
 		A972E6382B5657CC7E8F6592 /* Pods_Product_Hunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Product_Hunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				8082167822685D1F00017C6C /* Constants.swift */,
+				8082169C226A120A00017C6C /* DownloadClient.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -159,7 +166,9 @@
 			children = (
 				8082168E2269AF8000017C6C /* Info.plist */,
 				808216942269AFE800017C6C /* PostsModelTest.swift */,
+				808216982269FA3900017C6C /* CommentsModelTest.swift */,
 				808216962269BDA900017C6C /* PostsVCTest.swift */,
+				8082169A226A11D500017C6C /* DownloadClientTest.swift */,
 			);
 			path = "Product HuntTests";
 			sourceTree = "<group>";
@@ -302,6 +311,7 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -311,6 +321,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +342,7 @@
 				8082167B22686DA500017C6C /* PostsDataModel.swift in Sources */,
 				808216652268581B00017C6C /* AppDelegate.swift in Sources */,
 				808216812268A64B00017C6C /* CommentsModel.swift in Sources */,
+				8082169D226A120A00017C6C /* DownloadClient.swift in Sources */,
 				8082167922685D1F00017C6C /* Constants.swift in Sources */,
 				8082167F2268A56900017C6C /* CommentsCell.swift in Sources */,
 			);
@@ -342,6 +354,8 @@
 			files = (
 				808216972269BDA900017C6C /* PostsVCTest.swift in Sources */,
 				808216952269AFE800017C6C /* PostsModelTest.swift in Sources */,
+				8082169B226A11D500017C6C /* DownloadClientTest.swift in Sources */,
+				808216992269FA3900017C6C /* CommentsModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -92,16 +92,9 @@ class PostsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.nameLabel.text = data.name
         cell.tagLineLabel.text = data.tagLine
         cell.commentCountLabel.text = String(data.commentCount)
+        cell.downloadImage(withUrlString: data.imageUrl)
         
-        Alamofire.request(data.imageUrl).responseImage(completionHandler:   {(response) in
-            if let image = response.result.value{
-//                let roundedImage = image.af_imageRounded(withCornerRadius: 30)
-                DispatchQueue.main.async {
-                    cell.postImage.image = image
-                    SVProgressHUD.dismiss()
-                }
-            }
-            })
+
         return cell
     }
     

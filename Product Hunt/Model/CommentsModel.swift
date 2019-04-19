@@ -8,8 +8,8 @@
 
 import Foundation
 
-class CommentsModel {
-    
+class CommentsModel: Equatable{
+
     var comments: String
     var userId: String
     var votes: Int
@@ -20,5 +20,23 @@ class CommentsModel {
         self.userId = userId
         self.votes = votes
         self.date = date
+    }
+    
+    static func == (lhs: CommentsModel, rhs: CommentsModel) -> Bool {
+        if lhs.comments != rhs.comments{
+            return false
+        }
+        if lhs.userId != rhs.userId{
+            return false
+        }
+        if lhs.votes != rhs.votes{
+            return false
+        }
+        if lhs.date != rhs.date{
+            return false
+        }
+
+        
+        return true
     }
 }

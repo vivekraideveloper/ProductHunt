@@ -13,6 +13,7 @@ import SwiftyJSON
 import SDWebImage
 import SVProgressHUD
 import AlamofireImage
+import Toast
 
 class CommentsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -36,6 +37,7 @@ class CommentsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         fetchComments()
         commentsTableView.reloadData()
         SVProgressHUD.show()
+        
     }
     
     
@@ -60,6 +62,7 @@ class CommentsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     self.commentsTableView.reloadData()
                 }
                 SVProgressHUD.dismiss()
+                self.checkForNoComment()
             }else{
                 print("Error: \(String(describing: response.result.error))")
                 SVProgressHUD.dismiss()
@@ -79,7 +82,7 @@ class CommentsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CommentsCell
         let data = commentsData[indexPath.row]
-        cell.dateLabel.text = data.date
+        cell.dateLabel.text = String(data.date.prefix(10))
         cell.votesLabel.text = String(data.votes)
         cell.commentLabel.text = "UserId: \(data.userId)  \(data.comments)"
         SVProgressHUD.dismiss()
@@ -91,6 +94,18 @@ class CommentsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+    }
+    
+
+    
+    func checkForNoComment(){
+        if commentsData.count<1 {
+            self.view.makeToast("No Comments Available", duration: 3, position: CSToastPositionCenter)
+        }
+    }
+    
+    func pagination(){
         
     }
     
